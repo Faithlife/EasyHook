@@ -38,6 +38,7 @@
     <ProjectGuid>{D087E484-DBC9-4A2E-8368-C1D0E524994D}</ProjectGuid>
     <RootNamespace>EasyHookDll</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|Win32'" Label="Configuration">
@@ -171,14 +172,14 @@
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|x64'" />
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Debug|Win32'">EasyHook32</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Debug|Win32'">EasyHook32</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Debug|x64'">EasyHook64</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Debug|x64'">EasyHook64</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|Win32'">EasyHook32</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|Win32'">EasyHook32</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|x64'">EasyHook64</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|x64'">EasyHook64</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Debug|Win32'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Debug|Win32'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Debug|x64'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Debug|x64'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|Win32'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|Win32'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Release|x64'">EasyHook</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='netfx4-Release|x64'">EasyHook</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='netfx3.5-Debug|Win32'">
     <ClCompile>
@@ -208,8 +209,8 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook32.dll"
-copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x64\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <UseSafeExceptionHandlers>false</UseSafeExceptionHandlers>
@@ -243,8 +244,8 @@ copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook32.dll"
-copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x64\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <UseSafeExceptionHandlers>false</UseSafeExceptionHandlers>
@@ -279,8 +280,8 @@ copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook64.dll"
-copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x86\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <UseSafeExceptionHandlers>false</UseSafeExceptionHandlers>
@@ -315,8 +316,8 @@ copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook64.dll"
-copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x86\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <UseSafeExceptionHandlers>false</UseSafeExceptionHandlers>
@@ -356,8 +357,8 @@ copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook32.dll"
-copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x64\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -398,8 +399,8 @@ copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook32.dll"
-copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x64\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x64\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -440,8 +441,8 @@ copy "$(TargetDir)EasyHook32.lib" "$(TargetDir)..\x64\EasyHook32.lib"</Command>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook64.dll"
-copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x86\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -482,8 +483,8 @@ copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook64.dll"
-copy "$(TargetDir)EasyHook64.lib" "$(TargetDir)..\x86\EasyHook64.lib"</Command>
+      <Command>copy "$(TargetPath)" "$(TargetDir)..\x86\EasyHook.dll"
+copy "$(TargetDir)EasyHook.lib" "$(TargetDir)..\x86\EasyHook.lib"</Command>
     </PostBuildEvent>
     <MASM>
       <GenerateDebugInformation>false</GenerateDebugInformation>
